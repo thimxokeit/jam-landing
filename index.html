@@ -1,142 +1,150 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <title>JAM – 취미 밴드 연결 플랫폼</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JAM:째미난 밴드 라이프 커뮤니티</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/jam_logo_small.png" />
+
+  <!-- Pretendard -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"
+  />
+
   <style>
     :root {
-      --orange-main: #FC784F;
-      --orange-soft: #FFECE6;
-      --yellow-main: #FFF566;
-      --black-main: #222222;
-      --black-sub: #4D4D4D;
-      --grey-main: #A0A0A0;
-      --grey-soft: #D9D9D9;
+      --orange: #fc5c2b;
+      --yellow: #fff566;
+      --black: #222;
+      --gray: #a0a0a0;
+    }
+
+    * {
+      box-sizing: border-box;
     }
 
     body {
       margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Noto Sans KR", sans-serif;
-      background: var(--black-main);
-      color: white;
-      text-align: center;
+      font-family: Pretendard, sans-serif;
+      background: #fff;
+      color: var(--black);
     }
 
-    .container {
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 96px 20px;
+    /* ===== Header ===== */
+    .header {
+      padding: 120px 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 80px;
+      overflow: hidden;
     }
 
-    h1 {
-      font-size: 44px;
-      margin-bottom: 12px;
-      color: var(--orange-main);
+    .title {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .title h1 {
+      font-size: 120px;
+      font-weight: 800;
+      color: var(--orange);
+      letter-spacing: -5px;
+      line-height: 0.9;
+      margin: 0;
+    }
+
+    .title img {
+      height: 80px;
     }
 
     .subtitle {
-      font-size: 18px;
-      color: var(--grey-soft);
-      line-height: 1.6;
+      margin-top: 20px;
+      font-size: 48px;
+      font-weight: 400;
+      letter-spacing: -1.4px;
+      text-align: center;
     }
 
-    .cta {
-      margin-top: 40px;
+    /* ===== Hero Image ===== */
+    .hero {
+      position: relative;
+      width: 100%;
+      max-width: 1200px;
+      height: 360px;
+      background: var(--orange);
+      border-radius: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
-    .btn {
-      display: inline-block;
-      padding: 14px 32px;
-      border-radius: 10px;
-      background: var(--orange-main);
-      color: var(--black-main);
-      font-weight: 700;
-      text-decoration: none;
-      transition: all 0.2s ease;
+    .hero img {
+      height: 520px;
+      transform: translateY(-80px);
+      box-shadow: 0 -2px 12px rgba(0,0,0,0.15);
+      border-radius: 34px;
+      border: 2px solid var(--yellow);
+      background: #000;
     }
 
-    .btn:hover {
-      background: var(--yellow-main);
-      transform: translateY(-2px);
+    /* ===== Tablet ===== */
+    @media (max-width: 1279px) {
+      .title h1 {
+        font-size: 100px;
+      }
+      .subtitle {
+        font-size: 40px;
+      }
+      .hero img {
+        height: 480px;
+      }
     }
 
-    .features {
-      margin-top: 72px;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 24px;
-    }
-
-    .card {
-      background: #2b2b2b;
-      border-radius: 16px;
-      padding: 28px;
-      text-align: left;
-      border: 1px solid #333;
-    }
-
-    .card h3 {
-      margin: 0 0 10px;
-      font-size: 20px;
-      color: var(--yellow-main);
-    }
-
-    .card p {
-      margin: 0;
-      font-size: 15px;
-      color: var(--grey-main);
-      line-height: 1.6;
-    }
-
-    footer {
-      margin-top: 96px;
-      font-size: 14px;
-      color: var(--black-sub);
-    }
-
-    .highlight {
-      background: var(--orange-soft);
-      color: var(--orange-main);
-      padding: 4px 8px;
-      border-radius: 6px;
-      font-weight: 600;
+    /* ===== Mobile ===== */
+    @media (max-width: 799px) {
+      .header {
+        padding-top: 100px;
+        gap: 60px;
+      }
+      .title h1 {
+        font-size: 96px;
+      }
+      .title img {
+        height: 64px;
+      }
+      .subtitle {
+        font-size: 32px;
+      }
+      .hero {
+        height: 320px;
+      }
+      .hero img {
+        height: 440px;
+        transform: translateY(-60px);
+      }
     }
   </style>
 </head>
 <body>
 
-  <div class="container">
-    <h1>JAM</h1>
-    <p class="subtitle">
-      취미 밴드 멤버와 밴드를 <span class="highlight">제대로</span> 연결하는 플랫폼
-    </p>
-
-    <div class="cta">
-      <a href="#" class="btn">출시 알림 받기</a>
+  <header class="header">
+    <div>
+      <div class="title">
+        <h1>Let’s</h1>
+        <img src="assets/jam_logo.png" alt="JAM" />
+      </div>
+      <div class="subtitle">째미난 밴드 라이프 커뮤니티</div>
     </div>
 
-    <div class="features">
-      <div class="card">
-        <h3>밴드 멤버 찾기</h3>
-        <p>지역, 나이대, 세션 기준으로 나와 맞는 멤버를 쉽게 찾을 수 있어요</p>
-      </div>
-
-      <div class="card">
-        <h3>밴드 찾기</h3>
-        <p>이미 활동 중인 밴드를 확인하고 바로 합류할 수 있어요</p>
-      </div>
-
-      <div class="card">
-        <h3>프로필 기반 매칭</h3>
-        <p>악기, 실력, 활동 지역 정보가 자동으로 반영돼요</p>
-      </div>
+    <div class="hero">
+      <img src="assets/mobile_mockup.png" alt="JAM 앱 미리보기" />
     </div>
-
-    <footer>
-      © 2026 JAM. All rights reserved.
-    </footer>
-  </div>
+  </header>
 
 </body>
 </html>
