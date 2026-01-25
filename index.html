@@ -20,6 +20,7 @@
       --yellow: #fff566;
       --black: #222;
       --gray: #a0a0a0;
+      --light-orange: #fd9e81;
     }
 
     * {
@@ -92,6 +93,194 @@
       background: #000;
     }
 
+    /* ===== Main ===== */
+    .main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+
+    /* ===== Benefits ===== */
+    .benefits {
+      padding: 100px 0;
+      text-align: center;
+    }
+
+    .benefits-head {
+      margin-bottom: 80px;
+    }
+
+    .eyebrow {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--orange);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .headline {
+      font-size: 56px;
+      font-weight: 700;
+      letter-spacing: -2px;
+      margin: 0 0 24px 0;
+      color: var(--black);
+    }
+
+    .body {
+      font-size: 20px;
+      line-height: 1.6;
+      color: var(--gray);
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .benefits-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 40px;
+      margin-top: 60px;
+    }
+
+    .benefit-item {
+      padding: 40px 30px;
+      background: #f9f9f9;
+      border-radius: 20px;
+      transition: transform 0.3s ease;
+    }
+
+    .benefit-item:hover {
+      transform: translateY(-5px);
+    }
+
+    .benefit-item h3 {
+      font-size: 28px;
+      font-weight: 700;
+      margin: 0 0 16px 0;
+      color: var(--orange);
+    }
+
+    .benefit-item p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: var(--black);
+      margin: 0;
+    }
+
+    /* ===== Photo Row ===== */
+    .photo-row {
+      display: flex;
+      gap: 20px;
+      overflow-x: auto;
+      padding: 60px 0;
+      scroll-snap-type: x mandatory;
+    }
+
+    .photo-row img {
+      height: 280px;
+      border-radius: 20px;
+      flex-shrink: 0;
+      scroll-snap-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    /* ===== CTA ===== */
+    .cta {
+      text-align: center;
+      padding: 100px 0;
+      background: linear-gradient(135deg, var(--orange) 0%, #ff8a5c 100%);
+      border-radius: 30px;
+      margin: 60px 0;
+    }
+
+    .cta h2 {
+      font-size: 48px;
+      font-weight: 700;
+      color: white;
+      margin: 0 0 20px 0;
+      letter-spacing: -1.5px;
+    }
+
+    .cta p {
+      font-size: 20px;
+      color: white;
+      margin: 0 0 40px 0;
+      opacity: 0.9;
+    }
+
+    .cta-btn {
+      display: inline-block;
+      padding: 18px 48px;
+      background: white;
+      color: var(--orange);
+      font-size: 18px;
+      font-weight: 700;
+      text-decoration: none;
+      border-radius: 50px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .cta-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+
+    /* ===== Footer ===== */
+    .footer {
+      border-top: 1px solid var(--light-orange);
+      padding: 40px 16px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-direction: column;
+      gap: 27px;
+      margin-bottom: 80px;
+    }
+
+    .footer-links button {
+      background: none;
+      border: none;
+      font-family: Pretendard, sans-serif;
+      font-size: 14px;
+      letter-spacing: -0.35px;
+      color: var(--black);
+      cursor: pointer;
+      text-align: left;
+      padding: 0;
+    }
+
+    .footer-links button:hover {
+      color: var(--orange);
+    }
+
+    .footer-credits {
+      display: flex;
+      gap: 40px;
+      align-items: flex-end;
+      flex-wrap: wrap;
+    }
+
+    .footer-logo {
+      height: 55px;
+    }
+
+    .footer-text {
+      display: flex;
+      gap: 16px;
+      font-size: 12px;
+      letter-spacing: -0.12px;
+      color: var(--orange);
+    }
+
+    .footer-copyright {
+      font-size: 12px;
+      letter-spacing: -0.12px;
+      color: var(--orange);
+    }
+
     /* ===== Tablet ===== */
     @media (max-width: 1279px) {
       .title h1 {
@@ -102,6 +291,12 @@
       }
       .hero img {
         height: 480px;
+      }
+      .headline {
+        font-size: 48px;
+      }
+      .cta h2 {
+        font-size: 40px;
       }
     }
 
@@ -127,6 +322,26 @@
         height: 440px;
         transform: translateY(-60px);
       }
+      .headline {
+        font-size: 36px;
+      }
+      .body {
+        font-size: 18px;
+      }
+      .benefits-list {
+        grid-template-columns: 1fr;
+      }
+      .cta h2 {
+        font-size: 32px;
+      }
+      .cta p {
+        font-size: 18px;
+      }
+      .footer-credits {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+      }
     }
   </style>
 </head>
@@ -135,7 +350,7 @@
   <header class="header">
     <div>
       <div class="title">
-        <h1>Let’s</h1>
+        <h1>Let's</h1>
         <img src="assets/jam_logo.png" alt="JAM" />
       </div>
       <div class="subtitle">째미난 밴드 라이프 커뮤니티</div>
@@ -146,51 +361,69 @@
     </div>
   </header>
 
-<main class="main">
+  <main class="main">
 
-  <!-- ===== Benefits ===== -->
-  <section class="benefits">
-    <div class="benefits-head">
-      <p class="eyebrow">head 1</p>
-      <h2 class="headline">head 1</h2>
-      <p class="body">body 1</p>
+    <!-- ===== Benefits ===== -->
+    <section class="benefits">
+      <div class="benefits-head">
+        <p class="eyebrow">Why JAM?</p>
+        <h2 class="headline">음악을 사랑하는 모든 이들을 위한 공간</h2>
+        <p class="body">JAM은 밴드 활동을 하는 사람들이 서로 연결되고, 함께 성장할 수 있는 커뮤니티입니다.</p>
+      </div>
+
+      <div class="benefits-list">
+        <div class="benefit-item">
+          <h3>🎸 세션 매칭</h3>
+          <p>나와 맞는 밴드 멤버를 찾아보세요. 드럼, 베이스, 기타, 보컬 등 다양한 세션과 연결됩니다.</p>
+        </div>
+        <div class="benefit-item">
+          <h3>🎵 합주실 공유</h3>
+          <p>합주실 정보를 공유하고, 함께 사용할 멤버를 찾아보세요. 비용도 절약하고 네트워킹도 가능합니다.</p>
+        </div>
+        <div class="benefit-item">
+          <h3>🎤 공연 정보</h3>
+          <p>라이브 공연 일정과 오픈 마이크 정보를 한눈에 확인하세요. 무대에 설 기회를 놓치지 마세요.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Photo Row ===== -->
+    <section class="photo-row">
+      <img src="assets/Sessions=Mic-f.png" alt="보컬" />
+      <img src="assets/Sessions=Drum.png" alt="드럼" />
+      <img src="assets/Sessions=Bass.png" alt="베이스" />
+      <img src="assets/Sessions=Guitar.png" alt="기타" />
+      <img src="assets/Sessions=Keyboard.png" alt="키보드" />
+      <img src="assets/Sessions=etc.png" alt="기타 악기" />
+    </section>
+
+    <!-- ===== CTA ===== -->
+    <section class="cta">
+      <h2>지금 바로 시작하세요</h2>
+      <p>JAM과 함께 당신의 음악 여정을 시작해보세요</p>
+      <a href="#" class="cta-btn">앱 다운로드</a>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer-links">
+      <button>소개</button>
+      <button>이용약관</button>
+      <button>개인정보처리방침</button>
     </div>
 
-    <div class="benefits-list">
-      <div class="benefit-item">
-        <h3>head 1</h3>
-        <p>body 1</p>
+    <div class="footer-credits">
+      <img src="assets/jam_logo.png" alt="JAM" class="footer-logo" />
+      
+      <div class="footer-text">
+        <p>문의하기</p>
+        <p>제휴 문의</p>
       </div>
-      <div class="benefit-item">
-        <h3>head 1</h3>
-        <p>body 1</p>
-      </div>
-      <div class="benefit-item">
-        <h3>head 1</h3>
-        <p>body 1</p>
-      </div>
+
+      <p class="footer-copyright">© 2024 JAM. All rights reserved.</p>
     </div>
-  </section>
+  </footer>
 
-  <!-- ===== Photo Row ===== -->
-  <section class="photo-row">
-    <img src="assets/Sessions=Mic-f.png" alt="" />
-    <img src="assets/Sessions=Drum.png" alt="" />
-    <img src="assets/Sessions=Bass.png" alt="" />
-    <img src="assets/essions=Guitar.png" alt="" />
-    <img src="assets/Sessions=Keyboard.png" alt="" />
-    <img src="assets/Sessions=etc.png" alt="" />
-  </section>
-
-  <!-- ===== CTA ===== -->
-  <section class="cta">
-    <h2>head 1</h2>
-    <p>body 1</p>
-    <a href="#" class="cta-btn">head 1</a>
-  </section>
-
-</main>
-
-  
 </body>
 </html>
