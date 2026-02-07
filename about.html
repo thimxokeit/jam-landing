@@ -123,6 +123,72 @@
       color: var(--black);
     }
 
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 24px;
+      margin-top: 40px;
+    }
+
+    .team-card {
+      background: #fff;
+      border: 1px solid #e0e0e0;
+      border-radius: 16px;
+      padding: 32px 24px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .team-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+
+    .team-avatar {
+      width: 80px;
+      height: 80px;
+      margin: 0 auto 16px;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+
+    .team-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .team-name {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--black);
+      margin: 0 0 8px 0;
+    }
+
+    .team-role {
+      display: inline-block;
+      font-size: 13px;
+      font-weight: 500;
+      padding: 6px 14px;
+      border-radius: 20px;
+      margin: 0;
+    }
+
+    .team-role.dev {
+      background: #e8f5ff;
+      color: #0066cc;
+    }
+
+    .team-role.design {
+      background: #fff0e6;
+      color: #ff6b00;
+    }
+
+    .team-role.planning {
+      background: #ffe6f0;
+      color: #cc0066;
+    }
+
     /* ===== Footer ===== */
     .footer {
       border-top: 1px solid var(--orange);
@@ -232,48 +298,66 @@
   </header>
 
   <main class="main">
-    <h1 class="page-title">Sticky Studio 소개</h1>
-    <p class="page-subtitle">째미난 음악 생활을 만드는 Sticky Studio입니다.</p>
+    <h1 class="page-title">Sticky Studio</h1>
+    <p class="page-subtitle">재미난 삶을 연결하는 서비스를 만듭니다.</p>
 
     <div class="content-section">
-      <h2>우리의 미션</h2>
       <p>
-        Sticky Studio는 음악을 사랑하는 모든 사람들이 더 쉽게 연결되고, 
-        함께 음악을 만들어갈 수 있는 환경을 제공합니다.
-      </p>
-      <p>
-        밴드를 찾고, 멤버를 구하고, 음악적 동료를 만나는 과정이 
-        더 이상 어렵지 않도록 JAM을 통해 째미난 경험을 선사합니다.
+        우리는 음악을 좋아하는 사람들이 더 쉽게 만나고,<br>
+        함께 연주하며, 오래 즐길 수 있는 환경을 고민합니다.
       </p>
     </div>
 
     <div class="content-section">
-      <h2>JAM이란?</h2>
-      <p>
-        JAM은 "째미난 밴드 라이프 커뮤니티"로, 밴드 활동을 하고 싶은 뮤지션들이 
-        서로를 찾고 연결될 수 있는 플랫폼입니다.
-      </p>
-      
+      <h2>MISSION</h2>
       <div class="highlight-box">
-        <p><strong>🎸 밴드를 찾고 있나요?</strong><br>
-        다양한 장르와 스타일의 밴드를 만나보세요.</p>
-      </div>
-
-      <div class="highlight-box">
-        <p><strong>🎵 멤버를 찾고 있나요?</strong><br>
-        드럼, 베이스, 기타, 보컬 등 필요한 세션을 찾아보세요.</p>
+        <p><strong>함께할 때 더 째미난 음악!</strong></p>
       </div>
     </div>
 
     <div class="content-section">
-      <h2>연락하기</h2>
+      <h2>VISION</h2>
       <p>
-        Sticky Studio에 대해 더 알고 싶으시거나 협업을 원하시나요?<br>
-        언제든지 문의해 주세요.
+        밴드와 관련된 모든 서비스를 제공해<br>
+        취미 밴드인들이 음악에만 몰입하고 즐길 수 있는 환경을 만듭니다.
       </p>
+    </div>
+
+    <div class="content-section">
+      <h2>TEAM</h2>
+      <div class="team-grid">
+        <div class="team-card">
+          <div class="team-avatar">
+            <img src="assets/Sessions=Drum.png" alt="zig" />
+          </div>
+          <h3 class="team-name">zig</h3>
+          <span class="team-role dev">개발</span>
+        </div>
+        
+        <div class="team-card">
+          <div class="team-avatar">
+            <img src="assets/Sessions=Keyboard.png" alt="yoo" />
+          </div>
+          <h3 class="team-name">yoo</h3>
+          <span class="team-role design">디자인</span>
+        </div>
+        
+        <div class="team-card">
+          <div class="team-avatar">
+            <img src="assets/Sessions=Guitar.png" alt="xoy" />
+          </div>
+          <h3 class="team-name">xoy</h3>
+          <span class="team-role planning">기획</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="content-section">
+      <h2>Contact</h2>
       <p>
-        <strong>이메일:</strong> contact@stickystudio.com<br>
-        <strong>문의 폼:</strong> <a href="https://forms.gle/6JcnqBmy8Aaim5qv6" target="_blank" style="color: var(--orange);">문의하기</a>
+        <a href="mailto:jam.chunkybuddy@gmail.com" style="color: var(--orange); text-decoration: none; font-weight: 600;">
+          jam.chunkybuddy@gmail.com
+        </a>
       </p>
     </div>
   </main>
@@ -291,11 +375,3 @@
       <div class="footer-text">
         <a href="https://forms.gle/6JcnqBmy8Aaim5qv6" target="_blank">문의하기</a>
         <a href="https://forms.gle/9MV6DvcKfCKQTxbXA" target="_blank">버그 제보하기</a>
-      </div>
-
-      <p class="footer-copyright">© 2026 JAM. All rights reserved.</p>
-    </div>
-  </footer>
-
-</body>
-</html>
