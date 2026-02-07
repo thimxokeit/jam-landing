@@ -147,7 +147,7 @@
     .team-avatar {
       width: 85px;
       height: 85px;
-      margin: 0 auto 8px;
+      margin: 0 auto 4px; /* 기존 8px → 4px */
       border-radius: 50%;
       overflow: hidden;
     }
@@ -162,16 +162,18 @@
       font-size: 20px;
       font-weight: 700;
       color: var(--black);
-      margin: 0 0 8px 0;
-    }
+      margin: 0 0 6px 0; /* 기존 8px → 6px */
+    }  
 
     .team-role {
       display: inline-block;
       font-size: 13px;
       font-weight: 500;
       padding: 6px 14px;
-      background: #fd9e81;
-      color: #fc5c2b;
+      background: #fff3ee;          /* 아주 옅은 주황 */
+      color: var(--orange);
+      border: 1px solid var(--orange);
+      border-radius: 20px;
       margin: 0;
     }
 
