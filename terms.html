@@ -1,3 +1,360 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JAM:째미난 밴드 라이프 커뮤니티</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/jam_logo_small.png" />
+
+  <!-- Pretendard -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"
+  />
+
+  <style>
+    :root {
+      --orange: #fc5c2b;
+      --yellow: #fff566;
+      --black: #222;
+      --gray: #a0a0a0;
+      --light-orange: #fd9e81;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Pretendard, sans-serif;
+      background: #fff;
+      color: var(--black);
+    }
+
+    /* ===== Header ===== */
+    .header {
+      padding: 60px 16px 60px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+      overflow: hidden;
+    }
+
+    .title {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .title h1 {
+      font-size: 100px;
+      font-weight: 800;
+      color: var(--orange);
+      letter-spacing: -5px;
+      line-height: 1;
+      margin: 0;
+    }
+
+    .title img {
+      height: 100px;
+    }
+
+    /* ===== Hero Image ===== */
+    .hero {
+      position: relative;
+      width: 100%;
+      max-width: 900px;
+      height: 280px;
+      background: var(--orange);
+      border-radius: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 100px;
+    }
+
+    .hero img {
+      height: 400px;
+      transform: translateY(-60px);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+      border-radius: 34px;
+    }
+
+    /* ===== Main ===== */
+    .main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+
+    /* ===== Benefits ===== */
+    .benefits {
+      padding: 100px 0;
+      text-align: center;
+    }
+
+    .benefits-head {
+      margin-bottom: 80px;
+    }
+
+    .eyebrow {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--orange);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .headline {
+      font-size: 56px;
+      font-weight: 700;
+      letter-spacing: -2px;
+      margin: 0 0 24px 0;
+      color: var(--black);
+    }
+
+    .body {
+      font-size: 20px;
+      line-height: 1.6;
+      color: var(--gray);
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .benefits-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 40px;
+      margin-top: 60px;
+    }
+
+    .benefit-item {
+      padding: 40px 30px;
+      background: #f9f9f9;
+      border-radius: 20px;
+      transition: transform 0.3s ease;
+    }
+
+    .benefit-item:hover {
+      transform: translateY(-5px);
+    }
+
+    .benefit-item h3 {
+      font-size: 28px;
+      font-weight: 700;
+      margin: 0 0 16px 0;
+      color: var(--orange);
+    }
+
+    .benefit-item p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: var(--black);
+      margin: 0;
+    }
+
+    /* ===== Photo Row ===== */
+    .photo-row {
+      display: flex;
+      gap: 20px;
+      overflow-x: auto;
+      padding: 60px 0;
+      scroll-snap-type: x mandatory;
+    }
+
+    .photo-row img {
+      height: 210px;
+      border-radius: 20px;
+      flex-shrink: 0;
+      scroll-snap-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    /* ===== CTA ===== */
+    .cta {
+      text-align: center;
+      padding: 100px 0;
+      background: linear-gradient(135deg, var(--orange) 0%, #ff8a5c 100%);
+      border-radius: 30px;
+      margin: 40px 0;
+    }
+
+    .cta h2 {
+      font-size: 40px;
+      font-weight: 700;
+      color: white;
+      margin: 0 0 20px 0;
+      letter-spacing: -1.5px;
+    }
+
+    .cta p {
+      font-size: 20px;
+      color: white;
+      margin: 0 0 40px 0;
+      opacity: 0.9;
+    }
+
+    .cta-btn {
+      display: inline-block;
+      padding: 18px 48px;
+      background: white;
+      color: var(--orange);
+      font-size: 18px;
+      font-weight: 700;
+      text-decoration: none;
+      border-radius: 50px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .cta-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+
+   /* ===== Footer ===== */
+      .footer {
+        border-top: 1px solid var(--orange);
+        padding: 40px 16px 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+  
+      .footer-links {
+        display: flex;
+        flex-direction: row;
+        gap: 40px;
+        margin-bottom: 40px;
+        flex-wrap: wrap;
+      }
+  
+      .footer-links a {
+        background: none;
+        border: none;
+        font-family: Pretendard, sans-serif;
+        font-size: 14px;
+        letter-spacing: -0.35px;
+        color: var(--black);
+        cursor: pointer;
+        text-decoration: none;
+        padding: 0;
+      }
+  
+      .footer-links a:hover {
+        color: var(--orange);
+      }
+  
+      .footer-credits {
+        display: flex;
+        gap: 40px;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+  
+      .footer-logo {
+        height: 35px;
+      }
+  
+      .footer-text {
+        display: flex;
+        gap: 16px;
+        font-size: 12px;
+        letter-spacing: -0.12px;
+        color: var(--orange);
+      }
+  
+      .footer-text a {
+        color: var(--orange);
+        text-decoration: none;
+        transition: opacity 0.3s ease;
+      }
+  
+      .footer-text a:hover {
+        opacity: 0.7;
+        text-decoration: underline;
+      }
+  
+      .footer-copyright {
+        font-size: 12px;
+        letter-spacing: -0.12px;
+        color: var(--orange);
+      }
+
+    /* ===== Tablet ===== */
+    @media (max-width: 1279px) {
+      .title h1 {
+        font-size: 90px;
+      }
+      .title img {
+        height: 90px;
+      }
+      .hero {
+        max-width: 800px;
+        height: 250px;
+      }
+      .hero img {
+        height: 380px;
+      }
+      .headline {
+        font-size: 48px;
+      }
+      .cta h2 {
+        font-size: 40px;
+      }
+    }
+
+    /* ===== Mobile ===== */
+    @media (max-width: 799px) {
+      .header {
+        padding-top: 40px;
+        gap: 30px;
+      }
+      .title h1 {
+        font-size: 70px;
+      }
+      .title img {
+        height: 70px;
+      }
+      .hero {
+        height: 220px;
+        max-width: 100%;
+        margin-top: 60px;
+      }
+      .hero img {
+        height: 340px;
+        transform: translateY(-60px);
+      }
+      .headline {
+        font-size: 36px;
+      }
+      .body {
+        font-size: 18px;
+      }
+      .benefits-list {
+        grid-template-columns: 1fr;
+      }
+      .cta h2 {
+        font-size: 32px;
+      }
+      .cta p {
+        font-size: 18px;
+      }
+      .footer-links {
+        flex-direction: column;
+        gap: 20px;
+      }
+      .footer-credits {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+      }
+    }
+  </style>
+</head>
 <main class="main">
   <h1 class="page-title">이용약관</h1>
   <p class="page-subtitle">최종 수정일: 2026년 2월 8일</p>
