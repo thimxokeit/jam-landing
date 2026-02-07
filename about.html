@@ -1,1 +1,301 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sticky Studio 소개 - JAM</title>
 
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/jam_logo_small.png" />
+
+  <!-- Pretendard -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"
+  />
+
+  <style>
+    :root {
+      --orange: #fc5c2b;
+      --yellow: #fff566;
+      --black: #222;
+      --gray: #a0a0a0;
+      --light-orange: #fd9e81;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Pretendard, sans-serif;
+      background: #fff;
+      color: var(--black);
+    }
+
+    /* ===== Header ===== */
+    .header {
+      padding: 40px 16px;
+      border-bottom: 1px solid #f0f0f0;
+    }
+
+    .header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo {
+      height: 40px;
+      cursor: pointer;
+    }
+
+    .logo-text {
+      font-size: 32px;
+      font-weight: 800;
+      color: var(--orange);
+      text-decoration: none;
+      letter-spacing: -1px;
+    }
+
+    /* ===== Main ===== */
+    .main {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 80px 16px 120px;
+    }
+
+    .page-title {
+      font-size: 48px;
+      font-weight: 700;
+      color: var(--orange);
+      margin: 0 0 16px 0;
+      letter-spacing: -2px;
+    }
+
+    .page-subtitle {
+      font-size: 20px;
+      color: var(--gray);
+      margin: 0 0 60px 0;
+      line-height: 1.6;
+    }
+
+    .content-section {
+      margin-bottom: 60px;
+    }
+
+    .content-section h2 {
+      font-size: 32px;
+      font-weight: 700;
+      color: var(--black);
+      margin: 0 0 24px 0;
+      letter-spacing: -1px;
+    }
+
+    .content-section h3 {
+      font-size: 24px;
+      font-weight: 600;
+      color: var(--orange);
+      margin: 40px 0 16px 0;
+      letter-spacing: -0.5px;
+    }
+
+    .content-section p {
+      font-size: 16px;
+      line-height: 1.8;
+      color: var(--black);
+      margin: 0 0 20px 0;
+    }
+
+    .highlight-box {
+      background: #fff9f5;
+      border-left: 4px solid var(--orange);
+      padding: 24px;
+      border-radius: 8px;
+      margin: 32px 0;
+    }
+
+    .highlight-box p {
+      margin: 0;
+      color: var(--black);
+    }
+
+    /* ===== Footer ===== */
+    .footer {
+      border-top: 1px solid var(--orange);
+      padding: 40px 16px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-direction: row;
+      gap: 40px;
+      margin-bottom: 80px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      background: none;
+      border: none;
+      font-family: Pretendard, sans-serif;
+      font-size: 14px;
+      letter-spacing: -0.35px;
+      color: var(--black);
+      cursor: pointer;
+      text-decoration: none;
+      padding: 0;
+    }
+
+    .footer-links a:hover {
+      color: var(--orange);
+    }
+
+    .footer-credits {
+      display: flex;
+      gap: 40px;
+      align-items: flex-end;
+      flex-wrap: wrap;
+    }
+
+    .footer-logo {
+      height: 55px;
+    }
+
+    .footer-text {
+      display: flex;
+      gap: 16px;
+      font-size: 12px;
+      letter-spacing: -0.12px;
+      color: var(--orange);
+    }
+
+    .footer-text a {
+      color: var(--orange);
+      text-decoration: none;
+      transition: opacity 0.3s ease;
+    }
+
+    .footer-text a:hover {
+      opacity: 0.7;
+      text-decoration: underline;
+    }
+
+    .footer-copyright {
+      font-size: 12px;
+      letter-spacing: -0.12px;
+      color: var(--orange);
+    }
+
+    /* ===== Mobile ===== */
+    @media (max-width: 799px) {
+      .page-title {
+        font-size: 36px;
+      }
+
+      .page-subtitle {
+        font-size: 18px;
+      }
+
+      .content-section h2 {
+        font-size: 28px;
+      }
+
+      .content-section h3 {
+        font-size: 20px;
+      }
+
+      .footer-links {
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .footer-credits {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <div class="header-inner">
+      <img src="assets/jam_logo.png" alt="JAM" class="logo" onclick="location.href='index.html'" />
+      <a href="index.html" class="logo-text">JAM</a>
+    </div>
+  </header>
+
+  <main class="main">
+    <h1 class="page-title">Sticky Studio 소개</h1>
+    <p class="page-subtitle">째미난 음악 생활을 만드는 Sticky Studio입니다.</p>
+
+    <div class="content-section">
+      <h2>우리의 미션</h2>
+      <p>
+        Sticky Studio는 음악을 사랑하는 모든 사람들이 더 쉽게 연결되고, 
+        함께 음악을 만들어갈 수 있는 환경을 제공합니다.
+      </p>
+      <p>
+        밴드를 찾고, 멤버를 구하고, 음악적 동료를 만나는 과정이 
+        더 이상 어렵지 않도록 JAM을 통해 째미난 경험을 선사합니다.
+      </p>
+    </div>
+
+    <div class="content-section">
+      <h2>JAM이란?</h2>
+      <p>
+        JAM은 "째미난 밴드 라이프 커뮤니티"로, 밴드 활동을 하고 싶은 뮤지션들이 
+        서로를 찾고 연결될 수 있는 플랫폼입니다.
+      </p>
+      
+      <div class="highlight-box">
+        <p><strong>🎸 밴드를 찾고 있나요?</strong><br>
+        다양한 장르와 스타일의 밴드를 만나보세요.</p>
+      </div>
+
+      <div class="highlight-box">
+        <p><strong>🎵 멤버를 찾고 있나요?</strong><br>
+        드럼, 베이스, 기타, 보컬 등 필요한 세션을 찾아보세요.</p>
+      </div>
+    </div>
+
+    <div class="content-section">
+      <h2>연락하기</h2>
+      <p>
+        Sticky Studio에 대해 더 알고 싶으시거나 협업을 원하시나요?<br>
+        언제든지 문의해 주세요.
+      </p>
+      <p>
+        <strong>이메일:</strong> contact@stickystudio.com<br>
+        <strong>문의 폼:</strong> <a href="https://forms.gle/6JcnqBmy8Aaim5qv6" target="_blank" style="color: var(--orange);">문의하기</a>
+      </p>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-links">
+      <a href="about.html">Sticky Studio 소개</a>
+      <a href="terms.html">이용약관</a>
+      <a href="privacy.html">개인정보처리방침</a>
+    </div>
+
+    <div class="footer-credits">
+      <img src="assets/jam_logo.png" alt="JAM" class="footer-logo" />
+      
+      <div class="footer-text">
+        <a href="https://forms.gle/6JcnqBmy8Aaim5qv6" target="_blank">문의하기</a>
+        <a href="https://forms.gle/9MV6DvcKfCKQTxbXA" target="_blank">버그 제보하기</a>
+      </div>
+
+      <p class="footer-copyright">© 2026 JAM. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
