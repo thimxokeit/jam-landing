@@ -36,11 +36,11 @@
 
     /* ===== Header ===== */
     .header {
-      padding: 120px 16px;
+      padding: 80px 16px 60px;
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 80px;
+      gap: 50px;
       overflow: hidden;
     }
 
@@ -63,20 +63,12 @@
       height: 80px;
     }
 
-    .subtitle {
-      margin-top: 20px;
-      font-size: 48px;
-      font-weight: 400;
-      letter-spacing: -1.4px;
-      text-align: center;
-    }
-
     /* ===== Hero Image ===== */
     .hero {
       position: relative;
       width: 100%;
-      max-width: 1200px;
-      height: 360px;
+      max-width: 900px;
+      height: 280px;
       background: var(--orange);
       border-radius: 30px;
       display: flex;
@@ -85,12 +77,10 @@
     }
 
     .hero img {
-      height: 520px;
-      transform: translateY(-80px);
-      box-shadow: 0 -2px 12px rgba(0,0,0,0.15);
+      height: 400px;
+      transform: translateY(-60px);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
       border-radius: 34px;
-      border: 2px solid var(--yellow);
-      background: #000;
     }
 
     /* ===== Main ===== */
@@ -286,11 +276,12 @@
       .title h1 {
         font-size: 100px;
       }
-      .subtitle {
-        font-size: 40px;
+      .hero {
+        max-width: 800px;
+        height: 250px;
       }
       .hero img {
-        height: 480px;
+        height: 380px;
       }
       .headline {
         font-size: 48px;
@@ -303,23 +294,21 @@
     /* ===== Mobile ===== */
     @media (max-width: 799px) {
       .header {
-        padding-top: 100px;
-        gap: 60px;
+        padding-top: 60px;
+        gap: 40px;
       }
       .title h1 {
-        font-size: 96px;
+        font-size: 80px;
       }
       .title img {
-        height: 64px;
-      }
-      .subtitle {
-        font-size: 32px;
+        height: 54px;
       }
       .hero {
-        height: 320px;
+        height: 220px;
+        max-width: 100%;
       }
       .hero img {
-        height: 440px;
+        height: 340px;
         transform: translateY(-60px);
       }
       .headline {
@@ -348,12 +337,9 @@
 <body>
 
   <header class="header">
-    <div>
-      <div class="title">
-        <h1>Let's</h1>
-        <img src="assets/jam_logo.png" alt="JAM" />
-      </div>
-      <div class="subtitle">째미난 밴드 라이프 커뮤니티</div>
+    <div class="title">
+      <h1>Let's</h1>
+      <img src="assets/jam_logo.png" alt="JAM" />
     </div>
 
     <div class="hero">
@@ -382,7 +368,7 @@
         </div>
         <div class="benefit-item">
           <h3>🎤 프로필 공유</h3>
-          <p>관심있는 세션 및 밴드의 프로필을 확인하고 연락할 수 있어요.</p></p>
+          <p>관심있는 세션 및 밴드의 프로필을 확인하고 연락할 수 있어요.</p>
         </div>
       </div>
     </section>
