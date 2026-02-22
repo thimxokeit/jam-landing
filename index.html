@@ -225,7 +225,59 @@
       transform: translateY(-3px);
       box-shadow: 0 8px 20px rgba(0,0,0,0.2);
     }
+    /* ===== CTA Beta Tester Box ===== */
+    .cta-detail-box {
+      max-width: 800px;
+      margin: 30px auto;
+      background: white;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+    }
 
+    .cta-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+      position: relative;
+    }
+
+    .cta-grid-item {
+      text-align: left;
+    }
+
+    .cta-grid-item h4 {
+      font-size: 16px;
+      font-weight: 700;
+      margin: 0 0 8px 0;
+      color: var(--orange);
+    }
+
+    .cta-grid-item p {
+      font-size: 15px;
+      margin: 0;
+      color: #333;
+    }
+
+    .cta-divider-h {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 50%;
+      height: 2px;
+      background: var(--orange);
+      opacity: 0.3;
+    }
+
+    .cta-divider-v {
+      position: absolute;
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: var(--orange);
+      opacity: 0.3;
+    }
    /* ===== Footer ===== */
       .footer {
         border-top: 1px solid var(--orange);
@@ -362,6 +414,32 @@
       .cta p {
         font-size: 16px;
       }
+      .cta-detail-box {
+        padding: 24px 16px; /* 40px → 24px, 16px로 줄임 */
+        margin: 20px 16px; /* 양옆 여백도 추가 */
+      }
+
+      .cta-grid {
+        grid-template-columns: 1fr; /* 2열 → 1열로 */
+        gap: 20px;
+      }
+
+      .cta-grid-item h4 {
+        font-size: 15px;
+      }
+
+      .cta-grid-item p {
+        font-size: 14px;
+      }
+
+      .cta-divider-h {
+        display: none; /* 가로선 숨김 */
+      }
+
+      .cta-divider-v {
+        display: none; /* 세로선 숨김 */
+      }
+    }
       .footer-links {
         flex-direction: column;
         gap: 20px;
@@ -443,47 +521,45 @@
     <!-- ===== 베타 테스터 모집 CTA ===== -->
     <section class="cta">
       <h2>🎸 베타 테스터 모집 중</h2>
-      <p style="font-size: 18px; margin-bottom: 10px;">모집 기간: 2월 23일(일) ~ 2월 28일(금)</p>
+      <p style="font-size: 18px; margin-bottom: 10px; word-break: keep-all; padding: 0 16px;">모집 기간: 2월 23일(일) ~ 2월 28일(금)</p>
       
-      <div style="max-width: 800px; margin: 30px auto; background: white; padding: 40px; border-radius: 20px; box-shadow: 0 8px 30px rgba(0,0,0,0.15);">
-        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; position: relative;">
+      <div class="cta-detail-box">
+        <div class="cta-grid">
           
-          <div style="text-align: left;">
-            <p style="font-size: 16px; font-weight: 700; margin: 0 0 8px 0; color: var(--orange);">📍 모집 대상</p>
-            <p style="font-size: 15px; margin: 0; color: #333;">취미 밴드 경험이 있거나<br>취미 밴드 활동에 관심 있는 분</p>
+          <div class="cta-grid-item">
+            <h4>📍 모집 대상</h4>
+            <p>취미 밴드 경험이 있거나<br>취미 밴드 활동에 관심 있는 분</p>
           </div>
           
-          <div style="text-align: left;">
-            <p style="font-size: 16px; font-weight: 700; margin: 0 0 8px 0; color: var(--orange);">⏱️ 테스트 방식</p>
-            <p style="font-size: 15px; margin: 0; color: #333;">온라인 화상 인터뷰<br>(25~30분, 1:1 진행)</p>
+          <div class="cta-grid-item">
+            <h4>⏱️ 테스트 방식</h4>
+            <p>온라인 화상 인터뷰<br>(25~30분, 1:1 진행)</p>
           </div>
           
-          <!-- 가로 구분선 -->
-          <div style="position: absolute; left: 0; right: 0; top: 50%; height: 2px; background: var(--orange); opacity: 0.3;"></div>
+          <div class="cta-divider-h"></div>
           
-          <div style="text-align: left;">
-            <p style="font-size: 16px; font-weight: 700; margin: 0 0 8px 0; color: var(--orange);">📅 테스트 일정</p>
-            <p style="font-size: 15px; margin: 0; color: #333;">3월 2일(월) ~ 3월 15일(일)<br>중 편한 시간 선택</p>
+          <div class="cta-grid-item">
+            <h4>📅 테스트 일정</h4>
+            <p>3월 2일(월) ~ 3월 15일(일)<br>중 편한 시간 선택</p>
           </div>
           
-          <div style="text-align: left;">
-            <p style="font-size: 16px; font-weight: 700; margin: 0 0 8px 0; color: var(--orange);">🎁 참여 혜택</p>
-            <p style="font-size: 15px; margin: 0; color: #333;">소정의 참여 보상 +<br>정식 출시 시 얼리버드 혜택</p>
+          <div class="cta-grid-item">
+            <h4>🎁 참여 혜택</h4>
+            <p>소정의 참여 보상</p>
           </div>
           
-          <!-- 세로 구분선 -->
-          <div style="position: absolute; left: 50%; top: 0; bottom: 0; width: 2px; background: var(--orange); opacity: 0.3;"></div>
+          <div class="cta-divider-v"></div>
           
         </div>
       </div>
       
-      <p style="font-size: 17px; margin: 30px 0 40px 0; line-height: 1.5;">
+      <p style="font-size: 17px; margin: 30px 16px 40px; line-height: 1.5; word-break: keep-all;">
         JAM은 4월 정식 런칭 예정인 취미 밴드 매칭 플랫폼이에요.<br>
         여러분의 솔직한 피드백이 더 나은 서비스를 만듭니다.
       </p>
       
       <a href="https://calendar.app.google/nhxunkejqfExV1e79" class="cta-btn" target="_blank">지금 신청하기 →</a>
-      <p style="font-size: 14px; margin-top: 20px; opacity: 0.85;">* 신청페이지에서 가능한 시간을 예약해 주세요</p>
+      <p style="font-size: 14px; margin-top: 20px; opacity: 0.85; padding: 0 16px;">* 신청페이지에서 가능한 시간을 예약해 주세요</p>
     </section>
 
   </main>
