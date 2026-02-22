@@ -290,7 +290,8 @@
       .footer-links {
         display: flex;
         flex-direction: row;
-        gap: 40px;
+        align-items: center;
+        gap: 16px;
         margin-bottom: 40px;
         flex-wrap: wrap;
       }
@@ -310,7 +311,13 @@
       .footer-links a:hover {
         color: var(--orange);
       }
-  
+        /* 링크 사이 동그라미 */
+      .footer-links a:not(:last-child)::after {
+        content: "•";
+        margin-left: 16px;
+        color: var(--gray);
+        font-size: 12px;
+      }
       .footer-credits {
         display: flex;
         gap: 40px;
