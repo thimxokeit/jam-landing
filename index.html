@@ -112,6 +112,8 @@
       letter-spacing: -2px;
       margin: 0 0 24px 0;
       color: var(--black);
+      word-break: keep-all; /* 추가 */
+      line-height: 1.2; /* 추가 */
     }
 
     .body {
@@ -189,6 +191,8 @@
       color: white;
       margin: 0 0 10px 0;
       letter-spacing: -1.5px;
+      word-break: keep-all; /* 추가 */
+      padding: 0 16px; /* 추가 */
     }
 
     .cta p {
@@ -196,6 +200,8 @@
       color: white;
       margin: 0 0 40px 0;
       opacity: 0.9;
+      word-break: keep-all; /* 추가 */
+      padding: 0 16px; /* 추가 */
     }
 
     .cta-btn {
@@ -328,7 +334,7 @@
         transform: translateY(0px);
       }
       .headline {
-        font-size: 36px;
+        font-size: 32px;
       }
       .body {
         font-size: 18px;
@@ -343,10 +349,10 @@
         padding: 60px 16px;
       }
       .cta h2 {
-        font-size: 32px;
+        font-size: 28px;
       }
       .cta p {
-        font-size: 18px;
+        font-size: 16px;
       }
       .footer-links {
         flex-direction: column;
@@ -356,6 +362,16 @@
         flex-direction: column;
         align-items: flex-start;
         gap: 20px;
+      }
+    }
+        /* ===== 작은 모바일 (iPhone SE 등) ===== */
+    @media (max-width: 375px) {
+      .headline {
+        font-size: 28px; /* 더 작은 화면 대응 */
+      }
+      
+      .cta h2 {
+        font-size: 24px;
       }
     }
   </style>
